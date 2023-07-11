@@ -116,10 +116,7 @@ body {
   font-size: 11px;
   text-align: center;
   /* the next properties has been add by me */
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 60px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
