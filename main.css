@@ -1,0 +1,170 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 5% 10%;
+  background: var(--very-light-gray);
+}
+
+.text {
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+.text p:nth-of-type(1) {
+  font-size: 2em;
+  font-weight: 200;
+  /* margin: 0 0 15px; */
+}
+
+.text p:nth-of-type(2) {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.text p:nth-of-type(3) {
+  max-width: 500px;
+  margin: 20px auto 40px;
+  font-size: 15px;
+  color: var(--grayish-blue);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box div {
+  width: calc((100% - 60px) / 3);
+  background: white;
+  padding: 30px 30px 140px;
+  border-radius: 6px;
+  /* box-shadow: 0px 8px 20px 0px rgb(84 158 242 / 20%); */
+  box-shadow: 0px 5px 10px 0px rgb(84 158 242 / 20%);
+  border-top: 4px solid;
+  position: relative;
+  transition: 0.2s;
+}
+
+.box div:hover {
+  box-shadow: 0px 10px 30px 0px rgb(84 158 242 / 15%);
+  transform: translateY(-5px);
+}
+
+.box .supervisor {
+  border-top-color: var(--cyan);
+  transform: translateY(50%);
+}
+
+.box .team-builder {
+  border-top-color: var(--red);
+}
+
+.box .calculator {
+  border-top-color: var(--blue);
+  transform: translateY(50%);
+}
+
+.box .karma {
+  border-top-color: var(--orange);
+}
+
+.box .supervisor:hover,
+.box .calculator:hover {
+  box-shadow: 0px 10px 20px 0px rgb(84 158 242 / 15%);
+  transform: translateY(calc(50% - 5px));
+}
+
+.box div h3 {
+  color: var(--very-dark-blue);
+  margin-bottom: 10px;
+}
+
+.box div p {
+  font-size: 13px;
+  color: var(--grayish-blue);
+  /* margin-bottom: 90px; */
+}
+
+.box div img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  max-width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  /* the next properties has been add by me */
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 767px) {
+  body {
+    margin: 80px 30px 50px;
+  }
+
+  .text p:nth-of-type(1) {
+    font-size: 1.6em;
+  }
+
+  .text p:nth-of-type(2) {
+    font-size: 1.6em;
+  }
+
+  .text p:nth-of-type(3) {
+    font-size: 16px;
+    margin-bottom: 80px;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .box div {
+    width: 100%;
+  }
+
+  .box .supervisor,
+  .box .calculator {
+    transform: translate(0);
+  }
+
+  .box .supervisor:hover,
+  .box .calculator:hover {
+    transform: translateY(-5px);
+  }
+
+  .attribution {
+    position: static;
+    transform: translate(0);
+    width: 200px;
+    margin: 80px auto 0;
+  }
+}
